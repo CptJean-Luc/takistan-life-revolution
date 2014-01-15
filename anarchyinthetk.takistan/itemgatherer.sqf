@@ -40,3 +40,5 @@ player_get_total_item = {
   _total_itemquan = _fac_itemquan + _priv_itemquan + _inv_itemquan;
   _total_itemquan
 };
+
+itemquant_functions = true;
