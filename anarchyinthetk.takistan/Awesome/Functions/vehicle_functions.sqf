@@ -523,11 +523,7 @@ vehicle_set_modifications = {
 			_vehicle addweapon "CMFlareLauncher";
 			_vehicle addmagazine "60Rnd_CMFlareMagazine";
 			_vehicle addweapon "M240_veh";
-			_vehicle addmagazine "100Rnd_762x51_M240";
-			_vehicle addmagazine "100Rnd_762x51_M240";
-			_vehicle addmagazine "100Rnd_762x51_M240";
-			_vehicle addmagazine "100Rnd_762x51_M240";
-			_vehicle addmagazine "100Rnd_762x51_M240";
+			{_vehicle addmagazine "100Rnd_762x51_M240"} forEach [1,2,3,4];
 		};
 		case "AH6J_EP1": {
 			if(not(_silent)) then { hint "Reconfiguring helicopter armament..."; };
@@ -538,25 +534,18 @@ vehicle_set_modifications = {
 		case "An2_TK_Cop": {
 			if(not(_silent)) then { hint "Reconfiguring plane armament...";};
 			_vehicle addweapon "M3P";
-			_vehicle addmagazine "250Rnd_127x99_M3P";
-			_vehicle addmagazine "250Rnd_127x99_M3P";
-			_vehicle addmagazine "250Rnd_127x99_M3P";
+			{_vehicle addmagazine "250Rnd_127x99_M3P"} forEach [1,2,3];
 			_vehicle addweapon "TwinM134";
 			_vehicle addmagazine "2000Rnd_762x51_M134";
 		};
 		case "An2_TK_EP1": {
 			if(not(_silent)) then { hint "Reconfiguring plane armament...";};
 			_vehicle addweapon "DSHKM";
-			_vehicle addmagazine "150Rnd_127x107_DSHKM";
-			_vehicle addmagazine "150Rnd_127x107_DSHKM";
-			_vehicle addmagazine "150Rnd_127x107_DSHKM";
-			_vehicle addmagazine "150Rnd_127x107_DSHKM";
-			_vehicle addmagazine "150Rnd_127x107_DSHKM";
+			{_vehicle addmagazine "150Rnd_127x107_DSHKM"} forEach [1,2,3,4,5];
 			_vehicle addweapon "TwinVickers";
-			_vehicle addmagazine "500Rnd_TwinVickers";
-			_vehicle addmagazine "500Rnd_TwinVickers";
-			_vehicle addmagazine "500Rnd_TwinVickers";
-			_vehicle addmagazine "500Rnd_TwinVickers";
+			_vehicle addmagazine "500Rnd_TwinVickers"} forEach [1,2,3,4];
+			_vehicle addweapon "CamelGrenades";
+			{_vehicle addmagazine "6Rnd_Grenade_Camel"} forEach [1,2,3,4,5];
 		};
 		case "L39":{
 			if(not(_silent)) then { hint "Reconfiguring plane armament...";};
@@ -581,20 +570,12 @@ vehicle_set_modifications = {
 		};
 		case "BTR40_MG_TK_INS_EP1": {
 			if(not(_silent)) then { hint "Reconfiguring vehicle armament...";};
-			_vehicle removemagazine "50Rnd_127x107_DSHKM";
-			_vehicle removemagazine "50Rnd_127x107_DSHKM";
-			_vehicle removemagazine "50Rnd_127x107_DSHKM";
-			_vehicle removemagazine "50Rnd_127x107_DSHKM";
-			_vehicle removemagazine "50Rnd_127x107_DSHKM";
-			_vehicle removemagazine "50Rnd_127x107_DSHKM";
-			_vehicle addmagazine "150Rnd_127x107_DSHKM";
-			_vehicle addmagazine "150Rnd_127x107_DSHKM";
-			_vehicle addmagazine "150Rnd_127x107_DSHKM";
+			{_vehicle removemagazine "50Rnd_127x107_DSHKM"} forEach [1,2,3,4,5,6];
+			{_vehicle addmagazine "150Rnd_127x107_DSHKM"} forEach [1,2,3];
 		};
 		case "Ka137_MG_PMC": {
-			if(not(_silent)) then { hint "Reconfiguring vehicle armament...";};
-			_vehicle removemagazine "200Rnd_762x54_PKT";
-			_vehicle removemagazine "200Rnd_762x54_PKT";
+			if(not(_silent)) then { hint "Reconfiguring helicopter armament...";};
+			{_vehicle removemagazine "200Rnd_762x54_PKT"} forEach [1,2];
 			_vehicle addmagazine "1500Rnd_762x54_PKT";
 		};
 	};
